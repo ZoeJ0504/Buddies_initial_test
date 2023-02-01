@@ -34,7 +34,7 @@ function Event({ event, user }) {
             fetch(`/user/${event.petsitter_id}`)
                 .then(res => res.json())
                 .then(data => setPetsitter(data))
-    }, [])
+    }, [event.petsitter_id])
 
 
     useEffect(() => { setPets(owner.pets) }, [owner])
